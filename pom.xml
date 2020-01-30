@@ -4,7 +4,7 @@
 
     <groupId>guru.springframework</groupId>
     <artifactId>mb2g-release-plugin</artifactId>
-    <version>1.20-SNAPSHOT</version>
+    <version>1.21-SNAPSHOT</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -38,13 +38,6 @@
     </scm>
 
     <build>
-        <extensions>
-            <extension>
-                <groupId>io.packagecloud.maven.wagon</groupId>
-                <artifactId>maven-packagecloud-wagon</artifactId>
-                <version>0.0.6</version>
-            </extension>
-        </extensions>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -56,9 +49,7 @@
                 <artifactId>maven-release-plugin</artifactId>
                 <version>2.5.3</version>
                 <configuration>
-
                     <scmCommentPrefix>[maven-release-plugin] [skip ci]</scmCommentPrefix>
-
                 </configuration>
             </plugin>
         </plugins>
@@ -66,12 +57,12 @@
 
     <distributionManagement>
         <repository>
-            <id>packagecloud.release</id>
-            <url>packagecloud+https://packagecloud.io/rpaes/release</url>
+            <id>nexus-release</id>
+            <url>http://localhost:8081/repository/nexus-release/</url>
         </repository>
         <snapshotRepository>
-            <id>packagecloud.snapshot</id>
-            <url>packagecloud+https://packagecloud.io/rpaes/snapshot</url>
+            <id>nexus-snapshot</id>
+            <url>http://localhost:8081/repository/nexus-snapshot/</url>
         </snapshotRepository>
     </distributionManagement>
 </project>
