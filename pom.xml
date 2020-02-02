@@ -34,7 +34,7 @@
     <scm>
         <developerConnection>scm:git:https://github.com/ropaes/mb2g-release-plugin.git</developerConnection>
         <url>https://github.com/ropaes/mb2g-release-plugin</url>
-        <tag>mb2g-release-plugin-1.22</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <build>
